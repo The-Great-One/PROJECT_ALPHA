@@ -120,56 +120,56 @@ void loop()
 //}
 bool s1On() {
     Serial.println("Switch 1 turn on ...");
-    
+    digitalWrite(relayS1Pin, HIGH);
     iss1On = true;    
     return iss1On;
 }
 
 bool s1Off() {
     Serial.println("Switch 1 turn off ...");
-
+    digitalWrite(relayS1Pin, LOW);
     iss1On = false;
     return iss1On;
 }
 
 bool s2On() {
     Serial.println("Switch 2 turn on ...");
-
+    digitalWrite(relayS2Pin, HIGH);
     iss2On = true;
     return iss2On;
 }
 
 bool s2Off() {
   Serial.println("Switch 2 turn off ...");
-
+  digitalWrite(relayS2Pin, LOW);
   iss2On = false;
   return iss2On;
 }
 
 bool s3On() {
     Serial.println("Switch 3 turn on ...");
-
+    digitalWrite(relayS3Pin, HIGH);
     iss3On = true;
     return iss3On;
 }
 
 bool s3Off() {
   Serial.println("Switch 3 turn off ...");
-
+  digitalWrite(relayS3Pin, LOW);
   iss3On = false;
   return iss3On;
 }
 
 bool s4On() {
     Serial.println("Switch 4 turn on ...");
-
+    digitalWrite(relayS4Pin, HIGH);
     iss4On = true;
     return iss4On;
 }
 
 bool s4Off() {
   Serial.println("Switch 4 turn off ...");
-
+  digitalWrite(relayS4Pin, LOW);
   iss4On = false;
   return iss4On;
 }
