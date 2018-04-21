@@ -10,6 +10,8 @@ How to use:
 4. Flash 
 5. Enjoy
 
+### Bugs:
+1. Have to first remove the relay VCC from VIN of Node MCU for around 30 seconds during initialisation as it takes load.
 Credits
 - Aruna Tennakoon(kakopappa)
 - makermusings - [GitHub](https://github.com/makermusings/fauxmo)
