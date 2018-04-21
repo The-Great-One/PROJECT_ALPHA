@@ -20,12 +20,12 @@ bool s4On();
 bool s4Off();
 
 // Change this before you flash
-const char* ssid = "****";
-const char* password = "****";
-const int relayS1Pin = 14;
-const int relayS2Pin = 12;
-const int relayS3Pin = 13;
-const int relayS4Pin = 15;
+const char* ssid = "2ndFLOOR";
+const char* password = "books4ume";
+const int relayS1Pin = D5;
+const int relayS2Pin = D6;
+const int relayS3Pin = D7;
+const int relayS4Pin = D8;
 
 boolean wifiConnected = false;
 
@@ -76,7 +76,7 @@ void setup()
  
 void loop()
 {
-	 if(wifiConnected){
+   if(wifiConnected){
       upnpBroadcastResponder.serverLoop();
       
       s1->serverLoop();
@@ -85,7 +85,7 @@ void loop()
       s4->serverLoop();
 
       
-	 }
+   }
 }
 //void s1On() {
 //  digitalWrite(s1, HIGH); // turn on relay with voltage HIGH 
@@ -120,56 +120,56 @@ void loop()
 //}
 bool s1On() {
     Serial.println("Switch 1 turn on ...");
-    digitalWrite(relayS1Pin, HIGH);
+    digitalWrite(relayS1Pin, LOW);
     iss1On = true;    
     return iss1On;
 }
 
 bool s1Off() {
     Serial.println("Switch 1 turn off ...");
-    digitalWrite(relayS1Pin, LOW);
+    digitalWrite(relayS1Pin, HIGH);
     iss1On = false;
     return iss1On;
 }
 
 bool s2On() {
     Serial.println("Switch 2 turn on ...");
-    digitalWrite(relayS2Pin, HIGH);
+    digitalWrite(relayS2Pin, LOW);
     iss2On = true;
     return iss2On;
 }
 
 bool s2Off() {
   Serial.println("Switch 2 turn off ...");
-  digitalWrite(relayS2Pin, LOW);
+  digitalWrite(relayS2Pin, HIGH);
   iss2On = false;
   return iss2On;
 }
 
 bool s3On() {
     Serial.println("Switch 3 turn on ...");
-    digitalWrite(relayS3Pin, HIGH);
+    digitalWrite(relayS3Pin, LOW);
     iss3On = true;
     return iss3On;
 }
 
 bool s3Off() {
   Serial.println("Switch 3 turn off ...");
-  digitalWrite(relayS3Pin, LOW);
+  digitalWrite(relayS3Pin, HIGH);
   iss3On = false;
   return iss3On;
 }
 
 bool s4On() {
     Serial.println("Switch 4 turn on ...");
-    digitalWrite(relayS4Pin, HIGH);
+    digitalWrite(relayS4Pin, LOW);
     iss4On = true;
     return iss4On;
 }
 
 bool s4Off() {
   Serial.println("Switch 4 turn off ...");
-  digitalWrite(relayS4Pin, LOW);
+  digitalWrite(relayS4Pin, HIGH);
   iss4On = false;
   return iss4On;
 }
