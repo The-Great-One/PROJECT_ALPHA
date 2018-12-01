@@ -16,6 +16,7 @@ How to use:
 ### Credits
 - Aruna Tennakoon(kakopappa)
 - makermusings - [GitHub](https://github.com/makermusings/fauxmo)
+-The Great One (added support for 4 relays)
 
 ### Developed By
 
